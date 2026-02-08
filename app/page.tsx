@@ -49,7 +49,8 @@ export default function Dashboard() {
 
     try {
       setError(null);
-      const res = await fetch("/api/portfolio/live", {
+      const apiBase = process.env.NEXT_PUBLIC_API_URL || "";
+      const res = await fetch(`${apiBase}/api/portfolio/live`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ stocks: portfolio.stocks }),
@@ -179,7 +180,7 @@ export default function Dashboard() {
           </div>
         )}
 
-        {!error && data?.partialFailure && (
+        {!error && data?.partialFailure && data.totalPresentValue === 0 && (
           <div className="rounded-xl border border-amber-300 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/40 p-4 flex items-center gap-3">
             <AlertTriangle className="h-5 w-5 text-amber-500 shrink-0" />
             <div className="flex-1">

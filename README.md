@@ -56,7 +56,8 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Project Structure
 
 ```
-app/          → pages, layout, API routes
+app/          → pages, layout, API routes (used when running full Next.js locally)
+backend/      → Express API for Render (Yahoo/Google live data)
 components/   → UI (table, cards, charts, modals)
 hooks/        → usePortfolio, useAlerts, useAutoRefresh
 lib/          → calculations, cache, format, finance (yahoo, google, liveData)
@@ -64,9 +65,31 @@ data/         → portfolio.json, tickers.json
 docs/         → challenges.md (technical notes)
 ```
 
-## Deployment
+## Deployment (Frontend on Vercel, Backend on Render)
 
-Runs on **Vercel** with no extra config or API keys.
+### 1. Backend (Render)
+
+1. Go to [dashboard.render.com](https://dashboard.render.com) → **New** → **Web Service**.
+2. Connect **GitHub** → repo **btwitsPratyush/EquityLens**.
+3. Set **Root Directory** to `backend`.
+4. **Build command:** `npm install`  
+   **Start command:** `npm start`
+5. Deploy. Copy the service URL (e.g. `https://equitylens-api.onrender.com`).
+
+See [`backend/README.md`](backend/README.md) for details.
+
+### 2. Frontend (Vercel)
+
+1. Go to [vercel.com](https://vercel.com) → **Add New** → **Project** → import **EquityLens**.
+2. In **Environment Variables** add:
+   - **Name:** `NEXT_PUBLIC_API_URL`  
+   - **Value:** your Render backend URL (e.g. `https://equitylens-api.onrender.com`) — no trailing slash.
+3. Deploy. The app will call the Render API for live data.
+
+### Local (full stack)
+
+- **Option A:** Run Next.js only: `npm run dev` — uses built-in API routes at `/api/*`.
+- **Option B:** Run backend + frontend: start `backend` on port 4000, then set `NEXT_PUBLIC_API_URL=http://localhost:4000` and run `npm run dev` in the repo root.
 
 ## Notes
 
