@@ -1,0 +1,44 @@
+[
+  {
+    "stockName": "Reliance Industries",
+    "purchasePrice": 2450.5,
+    "quantity": 10,
+    "exchangeCode": "RELIANCE.NS",
+    "sector": "Energy"
+  },
+  {
+    "stockName": "TCS",
+    "purchasePrice": 3650,
+    "quantity": 5,
+    "exchangeCode": "TCS.NS",
+    "sector": "Technology"
+  },
+  {
+    "stockName": "HDFC Bank",
+    "purchasePrice": 1680,
+    "quantity": 15,
+    "exchangeCode": "HDFCBANK.NS",
+    "sector": "Financials"
+  },
+  {
+    "stockName": "Infosys",
+    "purchasePrice": 1420,
+    "quantity": 20,
+    "exchangeCode": "INFY.NS",
+    "sector": "Technology"
+  },
+  {
+    "stockName": "ICICI Bank",
+    "purchasePrice": 980,
+    "quantity": 25,
+    "exchangeCode": "ICICIBANK.NS",
+    "sector": "Financials"
+  },
+  {
+    "stockName": "State Bank of India",
+    "purchasePrice": 580,
+    "quantity": 30,
+    "exchangeCode": "SBIN.NS",
+    "sector": "Financials"
+  }
+]
