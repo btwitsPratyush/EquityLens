@@ -6,7 +6,7 @@ Real-time stock portfolio dashboard built with **Next.js**. View holdings with l
 
 ---
 
-## Features:
+## Features:-
 
 - **Portfolio table** — Particulars, Purchase Price, Qty, Investment, Portfolio %, NSE/BSE, CMP, Present Value, Gain/Loss, P/E Ratio, Latest Earnings. Collapsible sector grouping with sector-level totals (Total Investment, Present Value, Gain/Loss). Green/red for gains and losses.
 - **Live data** — CMP from Yahoo Finance (v8 chart API), P/E and Latest Earnings from Google Finance (Cheerio). Auto-refresh every 15s (configurable 5/15/30/60s).
