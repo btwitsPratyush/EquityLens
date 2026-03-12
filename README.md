@@ -1,6 +1,6 @@
 # EquityLens:-
 
-Real-time stock portfolio dashboard built with **Next.js**. View holdings with live prices (Yahoo Finance), P/E & earnings (Google Finance), sector grouping, and portfolio analytics.
+Real-time stock portfolio dashboard built with **Next.js**. View holdings with live prices (Yahoo Finance), P/E & earnings (Google Finance), sector grouping, and portfolio analytics
 
 **[→ Repository](https://github.com/btwitsPratyush/EquityLens)**
 
